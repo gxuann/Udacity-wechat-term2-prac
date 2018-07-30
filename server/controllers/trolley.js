@@ -35,13 +35,14 @@ module.exports = {
   },
 
   /**
-   * 更新购物车列表
-   */
+     * 更新购物车商品列表
+     * 
+     */
   update: async ctx => {
     let user = ctx.state.$wxInfo.userinfo.openId
     let productList = ctx.request.body.list || []
 
-    //删除购物车的旧数据
+    // 购物车旧数据全部删除
     await DB.query('DELETE FROM trolley_user WHERE trolley_user.user = ?', [user])
 
     let sql = 'INSERT INTO trolley_user(id, count, user) VALUES '
@@ -54,8 +55,11 @@ module.exports = {
       param.push(product.id)
       param.push(product.count || 1)
       param.push(user)
-
     })
+
     await DB.query(sql + query.join(', '), param)
+
+    ctx.state.data = {}
   },
+
 }

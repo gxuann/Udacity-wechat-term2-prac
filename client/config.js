@@ -35,6 +35,8 @@ var config = {
     addTrolley: `${host}/weapp/trolley`,
     // 获取购物车商品列表
     trolleyList: `${host}/weapp/trolley`,
+    //更新购物车商品列表
+    updateTrolley: `${host}/weapp/trolley`,
   }
 };
 
