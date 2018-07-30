@@ -1,0 +1,168 @@
+/* pages/trolley/trolley.wxss */
+.trolleyEmpty{
+  background: #fff;
+  border-radius: 13rpx;
+  box-shadow: 1rpx 1rpx 50rpx 5rpx #eaeaea;
+  margin: 60rpx 30rpx;
+  height: 400rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.trolleyEmptyImg{
+  width: 90rpx;
+  height: 90rpx;
+  opacity: 0.4;
+  margin-bottom: 30rpx;
+}
+.trolleyEmptyText{
+  font-size: 28rpx;
+  line-height: 40rpx;
+  color: rgba(139, 139, 139, 0.8);
+}
+.trolleyTop{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 24rpx;
+  padding-top: 15rpx;
+}
+.trolleyTotal{
+  display: flex;
+  align-items: center;
+  padding-left: 35rpx;
+  font-size: 35rpx;
+}
+.trolleyCheckWrapper{
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:36rpx;
+  height: 36rpx;
+  border-radius: 50%;
+  background: #ECECEE;
+}
+.trolleyCheckWrapper.white{
+  background: #ffffff;
+}
+.trolleyCheckWrapper.grey{
+  background: #eaeaea
+}
+.trolleyCheckWrapper.check{
+ background: #F5E069;
+}
+.trolleyCheck{
+  width: 22rpx;
+  height: 16rpx;
+}
+.trolleyTotalText,
+.trolleyEdit{
+  margin-left: 18rpx;
+  margin-right: 33rpx;
+  color: rgb(52, 55, 61, 0.8);
+  font-size: 24rpx;
+  line-height: 33rpx;
+}
+.productList{
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 70rpx;
+  bottom: 100rpx; 
+  padding-bottom: 30rpx;
+}
+.productCard{
+  background: #fff;
+  border-radius: 13rpx;
+  box-shadow: 1rpx 1rpx 50rpx 5rpx #eaeaea;
+  margin: 0 30rpx 30rpx;
+  height: 200rpx;
+  display: flex;
+  align-items: center;
+  padding-left: 30rpx;
+}
+.productImg{
+  flex-shrink: 0;
+  margin-left: 35rpx;
+  width: 160rpx;
+  height: 160rpx;
+}
+.productInfo{
+  flex: 1;
+  padding: 40rpx 30rpx 0 36rpx;
+  height: 100%;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+.prductName{
+  color: rgba(29, 29, 38, 0.8);
+}
+.productPrice{
+  margin-top: 5rpx;
+}
+.productCount{
+  text-align: right;
+}
+.productCountEdit{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.countMin,
+.countAdd{
+  width: 36rpx;
+  height: 36rpx;
+  line-height: 36rpx;
+  border-radius: 50%;
+  border: 3rpx solid #F6E474;
+  text-align: center;
+  font-size: 28rpx;
+  font-weight: bold;
+}
+.countNow{
+  margin: 0 20rpx;
+}
+.trolleyAccount{
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  padding-left: 24rpx;
+  height: 100rpx;
+  background: #fff;
+}
+.trolleyAccountText{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 30rpx;
+  color: rgba(52, 55, 61, 0.8);
+  font-size: 24rpx;
+  line-height: 33rpx;
+}
+.trolleyAccountNow{
+  margin-left: 15rpx;
+  font-size: 34rpx;
+  line-height: 48rpx;
+  color: #000;
+}
+.payBtn{
+  width: 250rpx;
+  height: 100%;
+  background: #F5E069;
+  color: rgba(52, 55, 61, 0.5);
+  line-height: 100rpx;
+  text-align: center;
+  font-size: 30rpx;
+  
+}
+.payBtn.canPay{
+  color: #34373D;
+  font-weight: bold;
+}

@@ -1,0 +1,98 @@
+/* pages/home/home.wxss */
+.topBox{
+  background-color: white;
+  position: relative;
+  margin: 32rpx 30rpx 0;
+  height: 326rpx;
+  border-radius: 13rpx;
+  box-shadow: 1rpx 1rpx 50rpx 5rpx #eaeaea;
+}
+.topName{
+  position: absolute;
+  top: 40rpx;
+  left: 40rpx;
+  display: flex;
+}
+.topNameText{
+  font-size: 28rpx;
+  margin: 0 20rpx;
+  font-weight: bold
+}
+.topNameLine{
+  width: 24rpx;
+  height: 39rpx;
+}
+.discount{
+  position: absolute;
+  bottom: 0rpx;
+  width: 259rpx;
+  height: 188rpx;
+  left: 40rpx;
+}
+.topImg{
+  position: absolute;
+  width: 240rpx;
+  height: 240rpx;
+  right: 47rpx;
+  top: 40rpx
+}
+
+.listTitle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 90rpx 0 35rpx;
+}
+.listTitleLine{
+  width: 24rpx;
+  height: 39rpx;
+}
+.listTitleText{
+  font-size: 28rpx;
+  margin: 0 20rpx;
+  font-weight: bold
+}
+
+.row{
+  display: flex;
+  justify-content: space-around;
+  margin: 0 30rpx 28rpx;
+}
+.productCard{
+  flex: 1;
+  background-color: #fff;
+  border-radius: 13rpx;
+  box-shadow: 1rpx 1rpx 50rpx 5rpx #eaeaea;
+}
+.productCard:first-child{
+  margin-right: 28rpx;
+}
+.productImg{
+  width: 100%;
+}
+.productName{
+  margin: 0 21rpx;
+  font-size: 28rpx;
+  color: rgba(29, 29, 38, 0.8)
+}
+.productMeta{
+  display: flex;
+  align-items: center;
+  margin: 9rpx 21rpx 15rpx;
+}
+.productMoney,
+.productAdd{
+  background: #F7E687;
+  width: 36rpx;
+  height: 36rpx;
+  border-radius: 50%;
+  text-align: center;
+  font-weight: bold;
+  line-height: 36rpx;
+  font-size: 26rpx;
+}
+.productPrice{
+  font-size: 28rpx;
+  flex: 1;
+  margin: 0 20rpx;
+}

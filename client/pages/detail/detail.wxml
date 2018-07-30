@@ -1,0 +1,38 @@
+<!--pages/detail/detail.wxml-->
+<view class='productCard'>
+  <image class='procuctImg' src='{{product.image}}'></image>
+  <view class='procuctName'>{{product.name}}</view>
+  <view class='productSource'>{{product.source}}</view>
+  <view class='productMoney'>
+    <view class='money'>￥</view>
+    <view class='price'>{{product.price}}</view>
+  </view>
+</view>
+
+<view class='reviewCard'>
+  <view class='serviceBox'>
+    <view class='service'>
+      <image class='check' src='/images/check-yellow.png'></image>
+      <view class='checkText'>7天免费退货</view>
+    </view>
+    <view class='service'>
+      <image class='check' src='/images/check-yellow.png'></image>
+      <view class='checkText'>24小时内发货并配送运费险</view>
+    </view>
+  </view>
+   <view class='reviewBox'>
+    <view class='reviewTitle'>
+      <view class='title'>已买评价</view>
+      <view class='count'>
+        <view class='countText'>1条</view>
+        <image class='countArrow' src='/images/grey-arrow.png'></image>
+      </view>
+    </view>
+    <view class='reviewDeatail'>"test"</view>
+  </view>
+</view>
+
+<view class='btnArea'>
+  <view class='btnTrolley' bindtap='addToTrolley'>加入购物车</view>
+  <view class='btnBuy' bindtap='buy'>立即购买</view>
+</view>

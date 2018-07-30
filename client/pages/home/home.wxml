@@ -1,0 +1,28 @@
+<!--pages/home/home.wxml-->
+<image class="bg" src="/images/bg.png"></image>
+  <view class="topBox">
+    <view class="topName">
+      <image class="topNameLine" src="/images/line-red.png"></image>
+      <view class="topNameText">{{productList[0].name}}</view>
+      <image class="topNameLine" src="/images/line-red.png"></image>
+    </view>
+    <image class="discount" src="/images/discount.png"></image>
+    <image class="topImg" src="{{productList[0].image}}"></image>
+  </view>
+  <view class="listTitle">
+    <image class="listTitleLine" src="/images/line-black.png"></image>
+    <view class="listTitleText">春季推荐</view>
+    <image class="listTitleLine" src="/images/line-black.png"></image>
+  </view>
+
+  <view class="row" wx:for='{{productList}}' wx:key='id' wx:if='{{index%2 === 1}}'>
+    <navigator class="productCard" wx:for='{{[productList[index], productList[index+1]]}}' wx:key='id' wx:for-index='pindex' wx:for-item='pitem' url="/pages/detail/detail?id={{pitem.id}}">
+      <image class="productImg" mode="widthFix" src="{{pitem.image}}"></image>
+      <view class="productName">{{pitem.name}}</view>
+      <view class="productMeta">
+        <view class="productMoney">￥</view>
+        <view class="productPrice">{{pitem.price}}</view>
+        <view class="productAdd" catchtap='addToTrolley' data-id='{{pitem.id}}'>+</view>
+      </view>
+    </navigator>
+  </view>

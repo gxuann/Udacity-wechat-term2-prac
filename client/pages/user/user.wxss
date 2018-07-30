@@ -1,0 +1,49 @@
+/* pages/user/user.wxss */
+.userCard{
+  background: #fff;
+  border-radius: 13rpx;
+  box-shadow: 1rpx 1rpx 50rpx 5rpx #eaeaea;
+  margin: 50rpx 30rpx;
+}
+.userInfo{
+  display: flex;
+  align-items: center;
+  height: 200rpx;
+}
+.userHead{
+  border-radius: 50%;
+  flex-shrink: 0;
+  height: 100rpx;
+  width: 100rpx;
+  background: #F5E069;
+  margin-left: 50rpx;
+}
+.userName{
+  flex: 1;
+  margin: 0 31rpx;
+  font-weight: bold;
+}
+.userSplit{
+  height: 5rpx;
+  background: #F9F9F9;
+}
+.userOptions .option{
+  display: flex;
+  align-items: center;
+  height: 130rpx;
+  margin-left: 50rpx;
+  margin-right: 30rpx;
+  border-bottom: 1px solid rgba(151, 151, 151, 0.2);
+}
+.userOptions .option:last-child{
+  border-bottom: none;
+}
+.optionTitle{
+  flex: 1;
+  font-size: 30rpx;
+}
+
+.arrow {
+  width: 11rpx;
+  height: 18rpx;
+}

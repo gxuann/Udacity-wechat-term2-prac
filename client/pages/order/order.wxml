@@ -1,0 +1,38 @@
+<!--pages/order/order.wxml-->
+<image class="bg" src="/images/bg.png"></image>
+<view wx:if="{{!userInfo}}">
+  <view class='unLoginCard'>
+    <image class='unLoginHead'></image>
+    <view class='unLoginInfo'>
+      <view class='unLoginInfoText'>未登录</view>
+      <view class='unLoginInfoTips'>点击微信登陆后可方便购物</view>
+    </view>
+  </view>
+  <button wx:if="{{locationAuthType==0}}" class="unLoginBtn" open-type='getUserInfo' bindgetuserinfo='onTapLogin'>微信登录</button>
+  <button wx:if="{{locationAuthType==1}}" class="unLoginBtn" open-type='openSetting' bindopensetting="onTapLogin">授权登录</button>
+</view>
+
+<view wx:elif="{{orderList.length>0}}">
+  <view class='orderHead'>
+    <image class='orderHeadLine' src='/images/line-black.png'></image>
+    <view class='orderHeadText'>已完成</view>
+  </view>
+  <view class='orderFrame' wx:for="{{orderList}}" wx:key="id" wx:for-index="{{bindex}}" wx:for-item="block">
+    <view class='orderCard' wx:for="{{block.list}}" wx:key="id">
+      <image class='orderImg' mode="widthFix" src='{{item.image}}'></image>
+      <view class='orderInfo1'>
+        <view class='orderName'>{{item.name}}</view>
+        <view class='orderPrice'>￥{{item.price}}</view>
+      </view>
+      <view class='orderInfo2'>
+        <view class='orderComment'>评论</view>
+        <view class='orderCount'>X{{item.count}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+
+<view class='emptyBox' wx:else>
+  <image class='emptyTitleImg' src='/images/order.png'></image>
+  <view class='emptyTitleText'>暂时还没有订单</view>
+</view>

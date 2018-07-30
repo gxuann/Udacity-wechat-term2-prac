@@ -1,0 +1,31 @@
+<!--pages/user/user.wxml-->
+<image class="bg" src="/images/bg.png"></image>
+<view wx:if="{{!userInfo}}">
+  <view class='unLoginCard'>
+    <image class='unLoginHead'></image>
+    <view class='unLoginInfo'>
+      <view class='unLoginInfoText'>未登录</view>
+      <view class='unLoginInfoTips'>点击微信登陆后可方便购物</view>
+    </view>
+  </view>
+  <button wx:if="{{locationAuthType==0}}" class="unLoginBtn" open-type='getUserInfo' bindgetuserinfo='onTapLogin'>微信登录</button>
+  <button wx:if="{{locationAuthType==1}}" class="unLoginBtn" open-type='openSetting' bindopensetting="onTapLogin">授权登录</button>
+</view>
+
+<view class='userCard' wx:else>
+  <view class='userInfo'>
+    <image class='userHead' src='{{userInfo.avatarUrl}}'></image>
+    <view class='userName'>{{userInfo.nickName}}</view>
+  </view>
+  <view class='userSplit'></view>
+  <view class='userOptions'>
+    <view class='option' bindtap='onTapAddress'>
+      <view class='optionTitle'>收货地址</view>
+      <image class='arrow' src='/images/grey-arrow.png'></image>
+    </view>
+    <view class='option'>
+      <view class='optionTitle' bindtap='onTapKF'>联系客服</view>
+      <image class='arrow' src='/images/grey-arrow.png'></image>
+    </view>
+  </view>
+</view>
