@@ -11,14 +11,19 @@ Page({
     commentValue: '',
   },
 
-  addComment(event){
-    let content = this.data.commentValue
-    if(!content) return
-
-    wx.showLoading({
-      title: '正在提交…',
+  onInput(event) {
+    this.setData({
+      commentValue: event.detail.value.trim()
     })
+  },
 
+  addComment(event) {
+    let content = this.data.commentValue
+    if (!content) return
+    
+    wx.showLoading({
+      title: '正在发表评论'
+    })
     qcloud.request({
       url: config.service.addComment,
       login: true,
@@ -32,34 +37,30 @@ Page({
 
         let data = result.data
 
-        if(!data.code){
+        if (!data.code) {
           wx.showToast({
-            title: '提交成功',
+            title: '发表评论成功'
           })
-          setTimeout(()=>{
+          setTimeout(() => {
             wx.navigateBack()
-          },1500)
-        }else {
-          wx.hideLoading()
+          }, 1500)
+
+        } else {
           wx.showToast({
-            title: '提交失败',
-            icon: 'none'
+            icon: 'none',
+            title: '发表评论失败'
           })
         }
       },
-      fail: result => {
+      fail: error => {
+        console.log(error)
         wx.hideLoading()
-        wx.showToast({
-          title: '提交失败',
-          icon: 'none'
-        })
-      },
-    })
-  },
 
-  onInput(event){
-    this.setData({
-      commentValue: event.detail.value.trim()
+        wx.showToast({
+          icon: 'none',
+          title: '发表评论失败'
+        })
+      }
     })
   },
 
@@ -82,48 +83,48 @@ Page({
    * 生命周期函数--监听页面初次渲染完成
    */
   onReady: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面显示
    */
   onShow: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面隐藏
    */
   onHide: function () {
-  
+
   },
 
   /**
    * 生命周期函数--监听页面卸载
    */
   onUnload: function () {
-  
+
   },
 
   /**
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-  
+
   },
 
   /**
    * 页面上拉触底事件的处理函数
    */
   onReachBottom: function () {
-  
+
   },
 
   /**
    * 用户点击右上角分享
    */
   onShareAppMessage: function () {
-  
+
   }
 })
