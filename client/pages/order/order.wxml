@@ -25,7 +25,7 @@
         <view class='orderPrice'>￥{{item.price}}</view>
       </view>
       <view class='orderInfo2'>
-        <view class='orderComment'>评论</view>
+        <navigator class='orderComment' url='/pages/comment/comment?id={{item.product_id}}&price={{item.price}}&name={{item.name}}&image={{item.image}}'>评论</navigator>
         <view class='orderCount'>X{{item.count}}</view>
       </view>
     </view>

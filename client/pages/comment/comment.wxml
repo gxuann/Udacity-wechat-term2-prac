@@ -1,0 +1,12 @@
+<!--pages/comment/comment.wxml-->
+<view class='productCard'>
+  <image class='productInfoImg' src='{{product.image}}'></image>
+  <view class='productInfo'>
+    <view class='productInfoName'>{{product.name}}</view>
+    <view class='productInfoPrice'>￥ {{product.price}}</view>
+  </view>
+</view>
+<view class='comment'>
+  <textarea class='commentInput' placeholder='请填写你的评价' auto-focus maxlength='255' bindinput='onInput'></textarea>
+</view>
+<view class="commentSubmit {{!commentValue ? 'dis' : ''}}" bindtap="addComment">提交评价</view>

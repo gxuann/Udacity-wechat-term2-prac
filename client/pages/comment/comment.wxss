@@ -1,0 +1,47 @@
+/* pages/comment/comment.wxss */
+.productCard{
+  background: #fff;
+  height: 300rpx;
+  align-items: center;
+  display: flex
+}
+.productInfoImg{
+  width: 200rpx;
+  height: 200rpx;
+  margin-left: 30rpx;
+}
+.productInfo{
+  margin-left: 70rpx;
+  font-size: 30rpx;
+}
+.productInfoPrice{
+  font-weight: bold;
+  margin-top: 15rpx;
+}
+.comment{
+  background: #fff;
+  margin: 40rpx 30rpx 30rpx;
+  border-radius: 13rpx;
+  box-shadow: 1rpx 1rpx 50rpx 5rpx #eaeaea;
+}
+.commentInput{
+  padding: 30rpx 35rpx;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 28rpx;
+  line-height: 40rpx;
+}
+.commentSubmit{
+  margin: 35rpx auto;
+  width: 250rpx;
+  height: 80rpx;
+  background: #F5E069;
+  text-align: center;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  border-radius: 13rpx;
+  box-shadow: 1rpx 1rpx 13rpx 5rpx #eaeaea;
+}
+.commentSubmit.dis{
+  color: rgba(52, 55, 61, 0.5);
+}

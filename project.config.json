@@ -31,8 +31,8 @@
 			"list": [
 				{
 					"id": 0,
-					"name": "购物车页面",
-					"pathName": "pages/trolley/trolley",
+					"name": "评论页面",
+					"pathName": "pages/comment/comment",
 					"query": ""
 				}
 			]
