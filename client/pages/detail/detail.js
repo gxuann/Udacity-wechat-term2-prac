@@ -11,6 +11,14 @@ Page({
     product: {},
   },
 
+  onTapComment(){
+    let product = this.data.product
+    if (product.commentCount){
+      wx.navigateTo({
+        url: `/pages/commentDetail/commentDetail?id=${product.id}&price=${product.price}&name=${product.name}&image=${product.image}`
+      })
+    }
+  },
   getProduct(id) {
     wx.showLoading({
       title: '商品数据加载中...',

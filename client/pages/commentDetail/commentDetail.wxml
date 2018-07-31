@@ -1,0 +1,21 @@
+<!--pages/commentDetail/commentDetail.wxml-->
+<view class='productCard'>
+  <image class='productInfoImg' src='{{product.image}}'></image>
+  <view class='productInfo'>
+    <view class='productInfoName'>{{product.name}}</view>
+    <view class='productInfoPrice'>￥ {{product.price}}</view>
+  </view>
+</view>
+<view class='commentList'>
+  <view class='commentTitle'>{{commentList.length}}条评价</view>
+  <view class='commentCard' wx:for='{{commentList}}' wx:key='id' wx:for-item='item'>
+    <image class='commentAvatar' src='{{item.avatar}}'></image>
+    <view class='commentInfo'>
+      <view class='commentTop'>
+        <view class='commentUserName'>{{item.username}}</view>
+        <view class='commentTime'>{{item.createTime}}</view>
+      </view>
+      <view class='commentContent'>{{item.content}}</view>
+    </view>
+  </view>
+</view>

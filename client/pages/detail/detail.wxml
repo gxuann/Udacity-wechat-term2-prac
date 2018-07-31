@@ -20,15 +20,15 @@
       <view class='checkText'>24小时内发货并配送运费险</view>
     </view>
   </view>
-   <view class='reviewBox'>
+  <view class='reviewBox' bindtap='onTapComment'>
     <view class='reviewTitle'>
       <view class='title'>已买评价</view>
       <view class='count'>
-        <view class='countText'>1条</view>
+        <view class='countText'>{{product.commentCount}}</view>
         <image class='countArrow' src='/images/grey-arrow.png'></image>
       </view>
     </view>
-    <view class='reviewDeatail'>"test"</view>
+    <view class='reviewDeatail'>{{product.firstComment.content}}</view>
   </view>
 </view>
 

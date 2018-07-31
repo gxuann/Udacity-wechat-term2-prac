@@ -32,7 +32,7 @@
 				{
 					"id": 0,
 					"name": "评论页面",
-					"pathName": "pages/comment/comment",
+					"pathName": "pages/commentDetail/commentDetail",
 					"query": ""
 				}
 			]
