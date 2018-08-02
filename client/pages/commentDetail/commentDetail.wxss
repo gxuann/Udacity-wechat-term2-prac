@@ -63,3 +63,14 @@
   line-height: 40rpx;
   color: #1D1D26;
 }
+.preview-list {
+  display: flex;
+  margin-top: 16rpx;
+}
+
+.preview-item {
+  margin-right: 10rpx;
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 10rpx;
+}

@@ -45,3 +45,23 @@
 .commentSubmit.dis{
   color: rgba(52, 55, 61, 0.5);
 }
+.preview-cnt {
+  display: flex;
+  margin-top: 29rpx;
+  margin-left: 29rpx;
+}
+
+.preview-image {
+  margin-right: 10rpx;
+  width: 180rpx;
+  height: 180rpx;
+  border-radius: 5rpx;
+}
+
+.opr-upload {
+  display: block;
+  margin-top: 29rpx;
+  margin-left: 29rpx; 
+  width: 43rpx;
+  height: 43rpx;
+}

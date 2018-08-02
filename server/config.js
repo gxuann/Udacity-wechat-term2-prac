@@ -30,9 +30,9 @@ const CONF = {
          * 地区简称
          * @查看 https://cloud.tencent.com/document/product/436/6224
          */
-        region: 'ap-guangzhou',
+        region: 'ap-shanghai',
         // Bucket 名称
-        fileBucket: 'qcloudtest',
+        fileBucket: 'comment',
         // 文件夹
         uploadFolder: ''
     },
